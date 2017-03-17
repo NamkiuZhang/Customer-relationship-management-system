@@ -1,0 +1,31 @@
+package com.crm.service;
+
+import java.io.Serializable;
+import java.util.List;
+
+import com.crm.po.Ordr;
+import com.crm.po.ProOrdr;
+import com.crm.po.Product;
+<<<<<<< .mine
+import com.crm.vo.ProductVo;
+=======
+import com.crm.vo.OrdrVo;
+import com.crm.vo.ProOrdreVo;
+import com.crm.vo.ProductVo;
+>>>>>>> .r567
+
+public interface IProOrdrService {
+
+	public List<ProductVo> listPro();
+
+	public Serializable addOrdr(OrdrVo ordrvo);
+
+	public Serializable addProOrdr(ProOrdreVo proOrdrvo);
+
+	public ProductVo finProById(long id);
+
+	public OrdrVo findOrdrById(long id);
+
+	public List<ProOrdreVo> findProByOrdrid(long id);
+	public List<ProductVo> findProductsByOrdrid(long id);
+}

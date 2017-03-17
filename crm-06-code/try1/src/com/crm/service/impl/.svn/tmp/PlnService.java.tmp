@@ -1,0 +1,132 @@
+package com.crm.service.impl;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+
+import com.crm.dao.IPlanDao;
+import com.crm.dao.impl.PlanDao4Orcl;
+import com.crm.dao.impl.StepDao4Orcl;
+import com.crm.po.Client;
+import com.crm.po.Pln;
+import com.crm.po.Step;
+import com.crm.service.IPlnService;
+import com.crm.util.Page;
+import com.crm.vo.PlanVo;
+
+public class PlnService implements IPlnService{
+
+	private IPlanDao planDao;
+	//private StepDao4Orcl stepDao4Orcl;
+	
+	public Page findall(int pageSize, int page) {
+	
+	    String hql="from Pln ";
+		int allRow = planDao.getAllRowCount(hql);// �ܼ�¼��
+		int totalPage = Page.countTotalPage(pageSize, allRow);// ��ҳ��
+		final int offset = Page.countOffset(pageSize, page);// ��ǰҳ��ʼ��¼
+		final int length = pageSize;// ÿҳ��¼��
+		final int currentPage = Page.countCurrentPage(page);
+		List<Pln> list = planDao.findall(offset, length);// "һҳ"�ļ�¼
+		System.out.println(list.size());
+		// �ѷ�ҳ��Ϣ���浽Bean��
+		Page pageBean = new Page();
+		pageBean.setPageSize(pageSize);
+		pageBean.setCurrentPage(currentPage);
+		pageBean.setAllRow(allRow);
+		pageBean.setTotalPage(totalPage);
+		pageBean.setList(list);
+		pageBean.init();
+		return pageBean;
+	}
+	public IPlanDao getPlanDao() {
+		return planDao;
+	}
+	public void setPlanDao(IPlanDao planDao) {
+		this.planDao = planDao;
+	}
+	public Serializable addPlan(PlanVo pVo) {
+		Pln plan=new Pln();
+	//	Step step=new Step();
+	//	stepDao4Orcl.addStep(step);
+		BeanUtils.copyProperties(pVo,plan);
+		return planDao.addPlan(plan);
+	}
+	public void delPlan(long planid) {
+		planDao.delPlan(planid);		
+	}
+	public PlanVo getbyid(long planid) {
+		Pln plan=planDao.getbyid(planid);
+		return p2v(plan);
+	}
+	public void modPlan(PlanVo pVo) {
+		Pln plan=new Pln();
+		BeanUtils.copyProperties(pVo, plan);
+		planDao.modPlan(plan);
+	}
+	
+
+	/*private List<PlanVo> findall(){
+		List<Pln> lps=planDao.findall();
+		List<PlanVo> lpvs=p2v(lps);
+		return lpvs;
+	}*/
+	
+	private List<PlanVo> p2v(List<Pln> lpps) {
+		List<PlanVo> lpvs = new ArrayList<PlanVo>();
+		for (Iterator iterator = lpps.iterator(); iterator.hasNext();) {
+			Pln ppo = (Pln) iterator.next();
+			PlanVo pvo = p2v(ppo);
+			lpvs.add(pvo);
+		}
+		return lpvs;
+	}
+
+	private PlanVo p2v(Pln ppo) {
+		PlanVo pVo = new PlanVo();
+		BeanUtils.copyProperties(ppo, pVo);
+		return pVo;
+	}
+	public void modPlanStstus(long planid) {
+		Pln plan=planDao.findbyid(planid);
+		plan.setRead("1");
+		planDao.modPlan(plan);
+	}
+<<<<<<< .mine
+	public void modPlanWorker(long planid, String name) {	
+		Pln plan=planDao.findbyid(planid);
+		plan.setWorker(name);
+		planDao.modPlan(plan);
+	}
+=======
+	public Page findByStatus(int pageSize, int page, String status) {
+		String hql="from Pln where status="+status;
+		int allRow = planDao.getAllRowCount(hql);// �ܼ�¼��
+		int totalPage = Page.countTotalPage(pageSize, allRow);// ��ҳ��
+		final int offset = Page.countOffset(pageSize, page);// ��ǰҳ��ʼ��¼
+		final int length = pageSize;// ÿҳ��¼��
+		final int currentPage = Page.countCurrentPage(page);
+		List<Pln> list = planDao.findByStatus(offset, length,status);// "һҳ"�ļ�¼
+		System.out.println(list.size());
+		// �ѷ�ҳ��Ϣ���浽Bean��
+		Page pageBean = new Page();
+		pageBean.setPageSize(pageSize);
+		pageBean.setCurrentPage(currentPage);
+		pageBean.setAllRow(allRow);
+		pageBean.setTotalPage(totalPage);
+		pageBean.setList(list);
+		pageBean.init();
+		return pageBean;
+	}
+	public void modPlanWorker(PlanVo pVo) {
+		// TODO Auto-generated method stub
+		
+	}
+>>>>>>> .r385
+	
+	
+
+}

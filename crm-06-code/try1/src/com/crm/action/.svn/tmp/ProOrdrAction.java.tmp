@@ -1,0 +1,115 @@
+package com.crm.action;
+
+import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import javax.xml.crypto.Data;
+
+import sun.security.jca.GetInstance;
+
+import com.crm.po.Ordr;
+import com.crm.po.Pln;
+import com.crm.po.ProOrdr;
+import com.crm.po.Product;
+import com.crm.service.IClientService;
+import com.crm.service.IPlnService;
+import com.crm.service.IProOrdrService;
+import com.crm.vo.PlanVo;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ProOrdrAction extends ActionSupport{
+
+	private IProOrdrService proOrdrService;
+	private IClientService clientService;
+	private IPlnService plnService;
+	private Product product;
+	private ProOrdr proOrdr;
+	private Ordr ordr;
+	private List<Product> lps;
+	private List<ProOrdr> lpos;
+	private String username;
+	
+	public void setPlnService(IPlnService plnService) {
+		this.plnService = plnService;
+	}
+	public List<ProOrdr> getLpos() {
+		return lpos;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public List<Product> getLps() {
+		return lps;
+	}
+	public Product getProduct() {
+		return product;
+	}
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	public ProOrdr getProOrdr() {
+		return proOrdr;
+	}
+	public void setProOrdr(ProOrdr proOrdr) {
+		this.proOrdr = proOrdr;
+	}
+	public Ordr getOrdr() {
+		return ordr;
+	}
+	public void setOrdr(Ordr ordr) {
+		this.ordr = ordr;
+	}
+	public void setProOrdrService(IProOrdrService proOrdrService) {
+		this.proOrdrService = proOrdrService;
+	}
+	
+	public void setClientService(IClientService clientService) {
+		this.clientService = clientService;
+	}
+	/*public String list() {
+		lps=proOrdrService.listPro();
+		return "json";
+	}
+	public String add(){
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		String nowDate = df.format(new Date());
+		ordr.setTime(nowDate);
+		ordr.setClient(clientService.getbyname(username));
+		proOrdrService.addOrdr(ordr);
+		return "json";
+	}
+	public String addProOrdr(){
+		proOrdr.setProduct(proOrdrService.finProById(product.getId()));
+		proOrdr.setOrdr(proOrdrService.finOrdrById(ordr.getId()));
+		proOrdrService.addProOrdr(proOrdr);		
+		return "json";
+	}
+	public String addServicePln(){
+		lpos=proOrdrService.findProByOrdrid(ordr.getId());
+		Ordr o=proOrdrService.finOrdrById(ordr.getId());
+		PlanVo pvo=new PlanVo();
+		pvo.setClientname(o.getClient().getName());
+		pvo.setCreator(o.getClient().getName());
+		pvo.setStatus("未分配");
+		pvo.setStime(o.getTime());
+		pvo.setStyleid(3);
+		pvo.setTel(o.getClient().getTel());
+		pvo.setConnector(o.getClient().getManager());
+		String des = "";
+		for (ProOrdr po : lpos) {
+			des+=po.getProduct().getName()+","+po.getQuantity()+";\n";
+		}
+		des+="送至："+o.getAddress()+"\n";
+		pvo.setDescr(des);
+		pvo.setName("来自"+o.getClient().getName()+"的订单");
+		plnService.addPlan(pvo);
+		return "json";
+	}*/
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.crm.service.impl.StepService" x="421" y="673">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IStepService"/>
+        <Association destinationClassName="com.crm.dao.IStepDao"
+            endpointName="stepDao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.dao.IStepDao"/>
+        <Communication destinationClassName="com.crm.po.Step"/>
+    </Class>
+    <Class name="com.crm.service.impl.WorkService" x="482" y="185">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IWorkService"/>
+        <Association destinationClassName="com.crm.dao.IWorkDao"
+            endpointName="workDao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.vo.PlanVo"/>
+        <Communication destinationClassName="com.crm.dao.IWorkDao"/>
+    </Class>
+    <Class name="com.crm.dao.IStepDao" x="597" y="467">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.service.IWorkService" x="340" y="264">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.impl.WorkDao" x="280" y="46">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.IWorkDao"/>
+    </Class>
+    <Class name="com.crm.action.StepAction" x="271" y="397">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.vo.PlanVo"
+            endpointName="pvo" kind="Simple"/>
+        <Association destinationClassName="com.crm.service.IStepService"
+            endpointName="stepService" kind="Simple"/>
+        <Association destinationClassName="com.crm.po.Step"
+            endpointName="steps" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IStepService"/>
+        <Communication destinationClassName="com.crm.vo.PlanVo"/>
+    </Class>
+    <Class name="com.crm.po.Step" x="460" y="421">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.service.IStepService" x="182" y="677">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.vo.PlanVo" x="63" y="462">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.impl.StepDao4Orcl" x="567" y="317">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.IStepDao"/>
+    </Class>
+    <Class name="com.crm.action.WorkAction" x="47" y="37">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.service.IWorkService"
+            endpointName="workservice" kind="Simple"/>
+        <Association destinationClassName="com.crm.vo.PlanVo"
+            endpointName="unhandle" kind="Simple"/>
+        <Association destinationClassName="com.crm.vo.PlanVo"
+            endpointName="unassigned" kind="Simple"/>
+        <Association destinationClassName="com.crm.vo.PlanVo"
+            endpointName="pvo" kind="Simple"/>
+        <Association destinationClassName="com.crm.vo.PlanVo"
+            endpointName="unread" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IWorkService"/>
+        <Communication destinationClassName="com.crm.vo.PlanVo"/>
+    </Class>
+    <Class name="com.crm.dao.IWorkDao" x="464" y="53">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>

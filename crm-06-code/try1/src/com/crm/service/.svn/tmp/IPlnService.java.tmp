@@ -1,0 +1,20 @@
+package com.crm.service;
+
+import java.io.Serializable;
+import java.util.List;
+
+import com.crm.po.Pln;
+import com.crm.util.Page;
+import com.crm.vo.PlanVo;
+
+public interface IPlnService {
+	public Page findall(int pageSize,int currentPage);
+	public Page findByStatus(int pageSize,int currentPage, String status);
+	public Serializable addPlan(PlanVo pVo);
+	public void modPlan(PlanVo pVo);
+	public void modPlanWorker(PlanVo pVo);
+	public void delPlan(long planid );
+	public PlanVo getbyid(long planid );
+	public void modPlanStstus(long planid );
+	public void modPlanWorker(long planid,String name );
+}

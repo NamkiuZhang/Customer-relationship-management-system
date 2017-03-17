@@ -1,0 +1,31 @@
+package com.crm.service;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
+
+import com.crm.po.Client;
+import com.crm.util.Page;
+import com.crm.vo.ClientLostVo;
+import com.crm.vo.ClientVo;
+
+
+public interface IClientService {
+
+	public Page findall(int pageSize,int currentPage);
+	public Serializable addClient(Client client);
+	public void modClient(Client client);
+    public List getRegions();
+	public void delClient(long clientid);
+	public Page findlostClient(int pageSize,int currentPage);
+	public Client getbyid(long cid);
+	public ClientVo getByName(String name);
+	public void modChance(String clientname,String chance);
+	public boolean checkClientName(String name);
+<<<<<<< .mine
+	public List lostclientstatis();
+	
+=======
+	public Client getbyname(String name);
+>>>>>>> .r434
+}

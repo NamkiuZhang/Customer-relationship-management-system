@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.crm.action.PageLoadAction" x="727" y="1649">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IPageManagementService"
+            endpointName="pageservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IPageManagementService"/>
+    </Class>
+    <Class name="com.crm.service.IPageManagementService" x="875" y="1503">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.IClientDao" x="639" y="745">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.action.NaviAction" x="521" y="1443">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.service.INaviService"
+            endpointName="naviservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.INaviService"/>
+    </Class>
+    <Class name="com.crm.vo.RoleVo" x="129" y="463">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.po.RoleRight" x="-8" y="416">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.po.Role"
+            endpointName="role" kind="Simple"/>
+        <Association destinationClassName="com.crm.po.Right"
+            endpointName="right" kind="Simple"/>
+    </Class>
+    <Class name="com.crm.dao.ILinkmanDao" x="450" y="996">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.action.AuthLoadAction" x="73" y="-9">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.vo.AuthManagementVo"
+            endpointName="amv" kind="Simple"/>
+        <Association
+            destinationClassName="com.crm.service.IAuthManagementService"
+            endpointName="authservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IAuthManagementService"/>
+    </Class>
+    <Class name="com.crm.action.HrEditAction" x="274" y="556">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IHrManagementService"
+            endpointName="hrservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IHrManagementService"/>
+    </Class>
+    <Class name="com.crm.action.PageDelAction" x="717" y="1508">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IPageManagementService"
+            endpointName="pageservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IPageManagementService"/>
+    </Class>
+    <Class name="com.crm.service.INaviService" x="534" y="1560">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.action.HrAddAction" x="675" y="559">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IHrManagementService"
+            endpointName="hrservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IHrManagementService"/>
+    </Class>
+    <Class name="com.crm.service.impl.AuthManagementService" x="275" y="-68">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IAuthManagementService"/>
+        <Association destinationClassName="com.crm.dao.IRoleRightDao"
+            endpointName="rolerightdao" kind="Simple"/>
+        <Association destinationClassName="com.crm.dao.IRoleDao"
+            endpointName="roledao" kind="Simple"/>
+        <Association destinationClassName="com.crm.dao.IRightDao"
+            endpointName="rightdao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.dao.IRoleDao"/>
+        <Communication destinationClassName="com.crm.dao.IRightDao"/>
+        <Communication destinationClassName="com.crm.vo.AuthManagementVo"/>
+        <Communication destinationClassName="com.crm.vo.RoleVo"/>
+        <Communication destinationClassName="com.crm.po.Right"/>
+        <Communication destinationClassName="com.crm.dao.IRoleRightDao"/>
+        <Communication destinationClassName="com.crm.po.Role"/>
+    </Class>
+    <Class name="com.crm.service.impl.HrManagementService" x="746" y="20">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IHrManagementService"/>
+        <Association destinationClassName="com.crm.dao.IRoleDao"
+            endpointName="roledao" kind="Simple"/>
+        <Association destinationClassName="com.crm.dao.IClientDao"
+            endpointName="clientdao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.dao.IRoleDao"/>
+        <Communication destinationClassName="com.crm.dao.IClientDao"/>
+        <Communication destinationClassName="com.crm.vo.HrManagementVo"/>
+        <Communication destinationClassName="com.crm.vo.NewClientVo"/>
+        <Communication destinationClassName="com.crm.vo.RoleVo"/>
+        <Communication destinationClassName="com.crm.po.Client"/>
+        <Communication destinationClassName="com.crm.po.Role"/>
+    </Class>
+    <Class name="com.crm.service.IClientMapService" x="878" y="510">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.service.IClientService" x="122" y="1227">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.vo.LinkmanVo" x="180" y="1409">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.vo.ClientLostVo" x="149" y="1560">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.IOrdrDao" x="280" y="2011">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.action.OrdrAction" x="759" y="1772">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.service.IOrdrService"
+            endpointName="ordrService" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IOrdrService"/>
+    </Class>
+    <Class name="com.crm.dao.impl.OrdrDao4Orcl" x="643" y="2024">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.IOrdrDao"/>
+    </Class>
+    <Class name="com.crm.action.HrDelAction" x="491" y="776">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IHrManagementService"
+            endpointName="hrservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IHrManagementService"/>
+    </Class>
+    <Class name="com.crm.po.Right" x="-26" y="489">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.IRoleDao" x="426" y="126">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.po.Linkman" x="-7" y="1154">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.po.Client"
+            endpointName="client" kind="Simple"/>
+    </Class>
+    <Class name="com.crm.service.IOrdrService" x="471" y="1678">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.impl.RoleDao4Orcl" x="429" y="250">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.IRoleDao"/>
+    </Class>
+    <Class name="com.crm.action.PageEditAction" x="925" y="1638">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IPageManagementService"
+            endpointName="pageservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IPageManagementService"/>
+        <Communication destinationClassName="com.crm.po.Right"/>
+    </Class>
+    <Class name="com.crm.po.Role" x="-11" y="287">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.service.impl.OrdrService" x="311" y="1854">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IOrdrService"/>
+        <Association destinationClassName="com.crm.dao.IOrdrDao"
+            endpointName="ordrDao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.po.Client"/>
+        <Communication destinationClassName="com.crm.dao.IOrdrDao"/>
+    </Class>
+    <Class name="com.crm.service.IHrManagementService" x="529" y="363">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.service.impl.ClientService" x="495" y="1250">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IClientService"/>
+        <Association destinationClassName="com.crm.dao.IClientDao"
+            endpointName="clientDao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.dao.IClientDao"/>
+        <Communication destinationClassName="com.crm.vo.ClientLostVo"/>
+        <Communication destinationClassName="com.crm.po.Client"/>
+        <Communication destinationClassName="com.crm.vo.ClientVo"/>
+    </Class>
+    <Class name="com.crm.service.impl.LinkmanService" x="184" y="1022">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.ILinkmanService"/>
+        <Association destinationClassName="com.crm.dao.ILinkmanDao"
+            endpointName="linkmanDao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.po.Linkman"/>
+        <Communication destinationClassName="com.crm.po.Client"/>
+        <Communication destinationClassName="com.crm.dao.ILinkmanDao"/>
+    </Class>
+    <Class name="com.crm.action.PageAddAction" x="863" y="1300">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IPageManagementService"
+            endpointName="pageservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.po.Right"/>
+    </Class>
+    <Class name="com.crm.service.ILinkmanService" x="189" y="888">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.impl.RoleRightDao4Orcl" x="266" y="429">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.IRoleRightDao"/>
+    </Class>
+    <Class name="com.crm.po.Client" x="-30" y="1330">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.action.AuthModAction" x="-18" y="160">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IAuthManagementService"
+            endpointName="authservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IAuthManagementService"/>
+    </Class>
+    <Class name="com.crm.vo.ClientVo" x="324" y="1438">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.vo.LinkmanVo"
+            endpointName="linkmans" kind="Simple"/>
+    </Class>
+    <Class name="com.crm.vo.AuthManagementVo" x="63" y="-115">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.service.IAuthManagementService" x="103" y="145">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.vo.HrManagementVo" x="-45" y="767">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.vo.RoleVo"
+            endpointName="lrvs" kind="Simple"/>
+        <Association destinationClassName="com.crm.vo.NewClientVo"
+            endpointName="lncvs" kind="Simple"/>
+    </Class>
+    <Class name="com.crm.vo.NewClientVo" x="266" y="697">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.dao.impl.ClientDao4Orcl" x="732" y="1049">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.IClientDao"/>
+    </Class>
+    <Class name="com.crm.service.impl.PageManagementService" x="1007" y="1255">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IPageManagementService"/>
+        <Association destinationClassName="com.crm.dao.IRightDao"
+            endpointName="rightdao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.dao.IRightDao"/>
+        <Communication destinationClassName="com.crm.po.Right"/>
+    </Class>
+    <Class name="com.crm.dao.IRightDao" x="977" y="-207">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.action.LinkmansAction" x="-25" y="921">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.ILinkmanService"
+            endpointName="linkmanService" kind="Simple"/>
+        <Association
+            destinationClassName="com.crm.service.IClientService"
+            endpointName="clientService" kind="Simple"/>
+        <Association destinationClassName="com.crm.po.Linkman"
+            endpointName="links" kind="Simple"/>
+        <Association destinationClassName="com.crm.po.Linkman"
+            endpointName="linkman" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.ILinkmanService"/>
+        <Communication destinationClassName="com.crm.po.Linkman"/>
+        <Communication destinationClassName="com.crm.service.IClientService"/>
+        <Communication destinationClassName="com.crm.vo.ClientVo"/>
+    </Class>
+    <Class name="com.crm.dao.impl.RightDao4Orcl" x="556" y="-211">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.IRightDao"/>
+    </Class>
+    <Class name="com.crm.dao.IRoleRightDao" x="195" y="276">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.crm.action.ClientMapLoadAction" x="888" y="353">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.crm.service.IClientMapService"
+            endpointName="cmapservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IClientMapService"/>
+    </Class>
+    <Class name="com.crm.action.HrLoadAction" x="374" y="833">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.vo.HrManagementVo"
+            endpointName="hmv" kind="Simple"/>
+        <Association
+            destinationClassName="com.crm.service.IHrManagementService"
+            endpointName="hrservice" kind="Simple"/>
+        <Communication destinationClassName="com.crm.service.IHrManagementService"/>
+    </Class>
+    <Class name="com.crm.vo.RoleManagementVo" x="137" y="631">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.crm.vo.RoleVo"
+            endpointName="lrvs" kind="Simple"/>
+    </Class>
+    <Class name="com.crm.service.impl.ClientMapService" x="882" y="628">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.service.IClientMapService"/>
+        <Association destinationClassName="com.crm.dao.IClientDao"
+            endpointName="clientdao" kind="Simple"/>
+        <Communication destinationClassName="com.crm.dao.IClientDao"/>
+    </Class>
+    <Class name="com.crm.dao.impl.LinkmanDao4Orcl" x="414" y="1139">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.crm.dao.ILinkmanDao"/>
+    </Class>
+</ClassDiagram>
